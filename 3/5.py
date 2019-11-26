@@ -19,4 +19,5 @@ for i in range(n):
             curr_num = line[-1]
     matrix.append(line)
 
-print(matrix)
+for line in matrix:
+    print(" ".join(map(str, line)))
