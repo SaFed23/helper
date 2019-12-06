@@ -3,5 +3,7 @@ with open("1.txt") as file:     # Блок служит для автомати�
     for line in file.readlines():   # Считываем все строки
         num = int(line.replace("\n", ""))   # Т.к. строка заканчивается на '\n' необходимо этот символ удалить и привести строку к целому типу
         if num % 2 == 0:
-            arr.append(num)
-print(arr[::-1])
+            arr.append(str(num))
+new_arr = arr[::-1]
+with open("3.txt", "w") as file:
+    file.write("\n".join(new_arr))
